@@ -1,0 +1,13 @@
+services:
+  site:
+    build:
+      context: ./site
+    container_name: cv-site
+    restart: always
+    expose:
+      - "80"
+#    networks:
+#      - shared-proxy
+networks:
+  shared-proxy:
+    external: true
