@@ -1,5 +1,5 @@
-EMAIL=ludovicdop@gmail.com
-DOMAIN=ludovicdoppler.fr
+EMAIL=allan.hans68350@gmail.com
+DOMAIN=allanHans.fr
 
 build:
 	docker compose build

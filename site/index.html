@@ -3,32 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV Interactif - Allan Hans</title>
+  <title>CV interactif – Allan Hans</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <header>
   <div class="profile-pic">
-    <!-- Remplace par ta propre photo -->
     <img src="images/ahans.jpg" alt="Photo de profil d'Allan Hans">
   </div>
-  <h1>Allan Hans</h1>
-  <p>Développeur Full Stack Bac+5 | Ancien militaire en reconversion</p>
+  <div>
+    <h1>Allan Hans</h1>
+    <p class="role">Développeur Full Stack Bac+5, ancien militaire en reconversion</p>
+  </div>
   <a href="cv.pdf" class="btn" download>Télécharger le CV PDF</a>
+
+  <div class="side-block">
+    <h2>Compétences</h2>
+    <dl>
+      <dt>Langages</dt>
+      <dd>C, C++, Python, PHP, JavaScript, TypeScript, HTML, CSS, SQL (MySQL, PostgreSQL).</dd>
+      <dt>Frameworks et outils</dt>
+      <dd>Symfony, Laravel, API Platform, VueJS (Nuxt), Node.js, Fastify, Tailwind CSS, Docker, Kubernetes, GitLab, Argo CD, Grafana.</dd>
+      <dt>Systèmes et sécurité</dt>
+      <dd>Linux, administration d'un serveur sécurisé, WebSocket sécurisé, challenges CTF de cybersécurité.</dd>
+      <dt>Méthodes de travail</dt>
+      <dd>Méthodologie agile (Scrum), revue de code en équipe, autonomie, entraide, veille technologique.</dd>
+    </dl>
+  </div>
+  <div class="side-block">
+    <h2>Contact</h2>
+    <p><a href="mailto:allan.hans68350@gmail.com">allan.hans68350@gmail.com</a></p>
+    <p><a href="tel:+33659682892">06 59 68 28 92</a></p>
+    <p>Permis B, Mulhouse (68)</p>
+    <p class="links">
+      <a href="https://www.linkedin.com/in/allan-hans-0a88a3214" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/allan-boop" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
 </header>
 
-<nav>
-  <a href="#presentation">Présentation</a>
-  <a href="#competences">Compétences</a>
-  <a href="#experience">Expériences</a>
-  <a href="#formations">Formations</a>
-  <a href="#projets">Projets</a>
-  <a href="#contact">Contact</a>
-</nav>
+<main>
 
 <section id="presentation" class="presentation">
   <h2>Présentation</h2>
@@ -43,36 +61,13 @@
   </p>
 </section>
 
-<section id="competences" class="skills">
-  <h2>Compétences</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Langages</h3>
-      <p>C, C++, Python, PHP, JavaScript, TypeScript, HTML, CSS, SQL (MySQL, PostgreSQL).</p>
-    </div>
-    <div class="skill-card">
-      <h3>Frameworks &amp; outils</h3>
-      <p>Symfony, Laravel, API Platform, VueJS (Nuxt), Node.js, Fastify, Tailwind CSS, Docker, Kubernetes, GitLab, Argo CD, Grafana.</p>
-    </div>
-    <div class="skill-card">
-      <h3>Systèmes &amp; sécurité</h3>
-      <p>Linux, administration d'un serveur sécurisé, WebSocket sécurisé, challenges CTF de cybersécurité.</p>
-    </div>
-    <div class="skill-card">
-      <h3>Méthodes de travail</h3>
-      <p>Méthodologie agile (Scrum), revue de code en équipe, autonomie, entraide, veille technologique.</p>
-    </div>
-  </div>
-</section>
-
-<section id="experience" class="experience">
+<section id="experience">
   <h2>Expériences professionnelles</h2>
   <div class="timeline">
 
     <div class="timeline-item">
-      <h3>Axians Groupe Vinci (Belfort) – Développeur web Fullstack</h3>
-      <span class="date">2026 · 6 mois</span>
-      <div class="bar"><div class="fill" style="--duration: 15%;"></div></div>
+      <h3>Axians Groupe Vinci (Belfort), développeur web Fullstack</h3>
+      <span class="date">2026, 6 mois</span>
       <p>Application web de suivi de consommation d'eau pour les collectivités.</p>
       <ul>
         <li>Sécurisation de la communication WebSocket (WSS)</li>
@@ -86,9 +81,8 @@
     </div>
 
     <div class="timeline-item">
-      <h3>Adipso (Strasbourg) – Développeur web Fullstack</h3>
-      <span class="date">2022 – 2023 · 6 mois</span>
-      <div class="bar"><div class="fill" style="--duration: 15%;"></div></div>
+      <h3>Adipso (Strasbourg), développeur web Fullstack</h3>
+      <span class="date">2022 – 2023, 6 mois</span>
       <ul>
         <li>Calculateur d'étanchéité de toiture en ligne (Laravel, VueJS, API Platform)</li>
         <li>Extranet de gestion de rendez-vous (Symfony, VueJS, API Platform)</li>
@@ -96,9 +90,8 @@
     </div>
 
     <div class="timeline-item">
-      <h3>Armée de terre (Haguenau) – Opérateur Transmission</h3>
-      <span class="date">2017 – 2022 · 5 ans</span>
-      <div class="bar"><div class="fill" style="--duration: 95%;"></div></div>
+      <h3>Armée de terre (Haguenau), opérateur transmission</h3>
+      <span class="date">2017 – 2022, 5 ans</span>
       <ul>
         <li>Gestion de réseaux de communication tactiques (radio, satellite, IP)</li>
         <li>Configuration et sécurisation de matériels de transmission (cryptage, authentification)</li>
@@ -109,75 +102,58 @@
   </div>
 </section>
 
-<section id="formations" class="experience">
+<section id="formations">
   <h2>Formations</h2>
   <div class="timeline">
     <div class="timeline-item">
-      <h3>École 42 Mulhouse – Concepteur développeur d'application</h3>
+      <h3>École 42 Mulhouse, concepteur développeur d'application</h3>
       <span class="date">Depuis 2023</span>
       <p>Formation par projets, en autonomie et en équipe, avec travail en méthodologie Scrum et revue de code.</p>
     </div>
     <div class="timeline-item">
-      <h3>Wild Code School Strasbourg – Développeur web et mobile Backend</h3>
+      <h3>Wild Code School Strasbourg, développeur web et mobile Backend</h3>
       <span class="date">2022</span>
       <p>HTML, CSS, JavaScript, PHP, Symfony, MySQL.</p>
     </div>
     <div class="timeline-item">
-      <h3>Pro Forma Mulhouse – BTS transport logistique</h3>
+      <h3>Pro Forma Mulhouse, BTS transport logistique</h3>
       <span class="date">2014 – 2016</span>
     </div>
   </div>
 </section>
 
 <section id="projets" class="projects">
-  <h2>Projets notables (42)</h2>
+  <h2>Projets notables à l'École 42</h2>
   <div class="projects-cards">
 
-    <div class="project-card">
-      <div class="project-info">
-        <h3><a href="https://github.com/allan-boop/libft" target="_blank" rel="noopener">Libft</a></h3>
-        <p>Recréation de fonctions de la bibliothèque standard C pour maîtriser la mémoire, les pointeurs et les chaînes de caractères.</p>
-        <span class="badge">C</span><span class="badge">Mémoire</span>
-      </div>
+    <div class="project-info">
+      <h3><a href="https://github.com/allan-boop/libft" target="_blank" rel="noopener">Libft</a></h3>
+      <p>Recréation de fonctions de la bibliothèque standard C pour maîtriser la mémoire, les pointeurs et les chaînes de caractères.</p>
+      <span class="badge">C</span><span class="badge">Mémoire</span>
     </div>
 
-    <div class="project-card">
-      <div class="project-info">
-        <h3><a href="https://github.com/allan-boop/minishell" target="_blank" rel="noopener">Minishell</a></h3>
-        <p>Création d'un shell Unix simplifié, avec lecture ligne par ligne, gestion fine des buffers et de la mémoire dynamique.</p>
-        <span class="badge">C</span><span class="badge">Unix</span><span class="badge">Shell</span>
-      </div>
+    <div class="project-info">
+      <h3><a href="https://github.com/allan-boop/minishell" target="_blank" rel="noopener">Minishell</a></h3>
+      <p>Création d'un shell Unix simplifié, avec lecture ligne par ligne, gestion fine des buffers et de la mémoire dynamique.</p>
+      <span class="badge">C</span><span class="badge">Unix</span><span class="badge">Shell</span>
     </div>
 
-    <div class="project-card">
-      <div class="project-info">
-        <h3>Born2BeRoot</h3>
-        <p>Mise en place d'un serveur Linux virtuel sécurisé : utilisateurs, gestion des droits et outils de sécurité.</p>
-        <span class="badge">Linux</span><span class="badge">Sécurité</span>
-      </div>
+    <div class="project-info">
+      <h3>Born2BeRoot</h3>
+      <p>Mise en place d'un serveur Linux virtuel sécurisé : utilisateurs, gestion des droits et outils de sécurité.</p>
+      <span class="badge">Linux</span><span class="badge">Sécurité</span>
     </div>
 
-    <div class="project-card">
-      <div class="project-info">
-        <h3><a href="https://github.com/allan-boop/ft_transcendance" target="_blank" rel="noopener">Transcendence</a></h3>
-        <p>Application web fullstack de jeu en temps réel.</p>
-        <span class="badge">Node.js</span><span class="badge">Fastify</span><span class="badge">TypeScript</span><span class="badge">SQLite</span><span class="badge">Tailwind CSS</span><span class="badge">Docker</span>
-      </div>
+    <div class="project-info">
+      <h3><a href="https://github.com/allan-boop/ft_transcendance" target="_blank" rel="noopener">Transcendence</a></h3>
+      <p>Application web fullstack de jeu en temps réel.</p>
+      <span class="badge">Node.js</span><span class="badge">Fastify</span><span class="badge">TypeScript</span><span class="badge">SQLite</span><span class="badge">Tailwind CSS</span><span class="badge">Docker</span>
     </div>
 
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email : <a href="mailto:allan.hans68350@gmail.com">allan.hans68350@gmail.com</a></p>
-  <p>Téléphone : <a href="tel:+33659682892">06 59 68 28 92</a></p>
-  <p>Permis B · Mulhouse (68)</p>
-  <p class="links">
-    <a href="https://www.linkedin.com/in/allan-hans-0a88a3214" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/allan-boop" target="_blank" rel="noopener">GitHub</a>
-  </p>
-</section>
+</main>
 
 <footer>
   <p>&copy; 2026 Allan Hans – CV interactif</p>
