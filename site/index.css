@@ -62,20 +62,23 @@ header h1 {
 }
 header .role { margin: 0; font-size: 0.98rem; color: #c9ccd8; }
 
+header a:focus-visible { outline-color: var(--peach); }
+
+/* Bouton d'export PDF */
 .btn {
   align-self: flex-start;
   padding: 10px 20px;
+  border: 0;
   border-radius: 6px;
   background: var(--peach);
   color: var(--slate-dark);
+  font: inherit;
   font-weight: 700;
   font-size: 0.95rem;
-  text-decoration: none;
+  cursor: pointer;
 }
 .btn:hover { background: var(--peach-dark); }
-.btn:focus-visible { outline-color: #fff; }
-
-header a:focus-visible { outline-color: var(--peach); }
+.btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
 /* Blocs du bandeau : compétences et contact */
 .side-block { padding-top: 22px; border-top: 1px solid #4b5a42; }
@@ -171,4 +174,25 @@ footer p { margin: 0; }
   header h1 { font-size: 2.4rem; }
   footer { padding-left: 24px; }
   .presentation p:first-of-type { font-size: 1.3rem; }
+}
+
+/* Impression : "Enregistrer en PDF" dans la fenêtre d'impression produit le CV */
+@media print {
+  @page { size: A4; margin: 0; }
+  html { font-size: 13px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    display: grid;
+    grid-template-columns: 31% minmax(0, 1fr);
+    /* la couleur du bandeau se prolonge sur chaque page */
+    background: linear-gradient(to right, var(--slate-dark) 31%, var(--paper) 31%);
+  }
+  header { position: static; height: auto; padding: 28px 22px; }
+  header h1 { font-size: 2.2rem; }
+  .btn, footer { display: none; }
+  main { padding: 0 32px; max-width: none; }
+  section { padding-top: 36px; }
+  .timeline { animation: none; }
+  .timeline-item, .project-info { break-inside: avoid; }
+  h2 { break-after: avoid; }
 }

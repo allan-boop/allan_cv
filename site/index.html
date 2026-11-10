@@ -19,8 +19,8 @@
     <h1>Allan Hans</h1>
     <p class="role">Développeur Full Stack Bac+5, ancien militaire en reconversion</p>
   </div>
-  <a href="cv.pdf" class="btn" download>Télécharger le CV PDF</a>
 
+  <button type="button" class="btn" id="pdf-btn">Exporter en PDF</button>
   <div class="side-block">
     <h2>Compétences</h2>
     <dl>
@@ -158,6 +158,10 @@
 <footer>
   <p>&copy; 2026 Allan Hans – CV interactif</p>
 </footer>
+
+<script>
+  document.getElementById('pdf-btn').addEventListener('click', function () { window.print(); });
+</script>
 
 </body>
 </html>
